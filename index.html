@@ -3,10 +3,52 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grocery Bud</title>
+        <!-- font-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        />
+
         <link rel="stylesheet" href="./styles/style.css" />
-        <title>Todo list</title>
     </head>
     <body>
+        <section class="section-center">
+            <form class="todos-form">
+                <h3>Todo list</h3>
+                <div class="form-control">
+                    <div class="inputs-div">
+                        <input
+                            type="text"
+                            id="todo-input"
+                            placeholder="e.g. go to doctor"
+                        />
+                        <input
+                            class="new-task-input medium"
+                            id="input-date"
+                            type="date"
+                        />
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+                <div class="error"></div>
+            </form>
+
+            <div class="todos-container">
+                <div class="sortSearchContainer">
+                    <button id="sorting">Sort By Date</button>
+                    <input type="text" id="search-input" placeholder="type for search"/>
+                    <i
+                        class="fas fa-times"
+                        id="clear-icon"
+                        style="color: #e01b24"
+                    ></i>
+                </div>
+                <div class="todos-list"></div>
+                <button class="clear-btn">clear items</button>
+            </div>
+        </section>
+
         <script type="module" src="./src/init.js"></script>
     </body>
 </html>
